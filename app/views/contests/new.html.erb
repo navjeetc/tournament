@@ -1,0 +1,26 @@
+<%= render :partial => "main/header", locals: {page_title: "New"} %>
+<div data-role="content">
+  <div id="container">
+    <%= render "main/flash" %>
+
+    <div><%= link_to "Back to List", contests_path, {"data-role" => "button", "data-icon" =>"grid", "data-inline"=>"true"} %></div>
+    <%= form_for @contest do |f| %>
+      <%= f.error_messages %>
+      <div>
+        <%= f.label :name %><br />
+        <%= f.text_field :name %>
+      </div>
+      <div>
+        <%= f.label :started_on %><br />
+        <%= f.date_field :started_on %>
+      </div>
+      <div>
+        <%= f.label :ended_on %><br />
+        <%= f.date_field :ended_on %>
+      </div>
+      <div><%= f.submit "Submit" %></di>
+    <% end %>
+
+   
+  </div>
+</div>

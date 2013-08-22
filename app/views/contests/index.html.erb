@@ -1,0 +1,21 @@
+<%= render :partial => "main/header", locals: {page_title: "Tournaments"} %>
+
+<div data-role="content">
+  <div id="container">
+    <%= render "main/flash" %>
+    <div class="ui-grid-b">
+        <div class="ui-block-a">Name</div>
+        <div class="ui-block-b">Started On</div>
+        <div class="ui-block-c">Ended On</div>
+    </div>
+    <div class="ui-grid-b">
+      <% for contest in @contests %>
+          <div class="ui-block-a"><%= link_to contest.name, contest_path(contest) %></div>
+          <div class="ui-block-b"><%= contest.started_on %></div>
+          <div class="ui-block-c"><%= contest.ended_on %></div>
+      <% end %>
+    </div>
+
+    <div><%= link_to "New Tournament", new_contest_path, {"data-role" => "button", "data-icon" => "plus"} %></div>
+  </div>
+</div>    
