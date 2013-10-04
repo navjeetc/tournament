@@ -1,4 +1,4 @@
-tournament
+Tournament
 ==========
 
 Mobile web app to create/manage a tournament (mainly for badminton)
