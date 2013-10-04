@@ -47,3 +47,5 @@ gem 'debugger', group: [:development, :test]
 gem "nifty-generators", :group => :development
 
 gem "mocha", group: :test
+
+gem "recap", "~> 1.0.0"

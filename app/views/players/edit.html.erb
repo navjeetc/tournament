@@ -1,0 +1,11 @@
+<%= render :partial => "main/header", locals: {page_title: "Edit Player"} %>
+<div data-role="content">
+	<% title "Edit Player" %>
+
+	<%= render 'form' %>
+
+	<p>
+	  <%= link_to "Show", @player %> |
+	  <%= link_to "View All", players_path %>
+	</p>
+</div>

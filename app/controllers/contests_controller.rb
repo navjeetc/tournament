@@ -18,6 +18,7 @@ class ContestsController < ApplicationController
 
   def show
     @contest = Contest.find(params[:id])
+    @players = @contest.players.order(:last_name)
   end
   
   private

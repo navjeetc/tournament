@@ -1,0 +1,14 @@
+<% title "Teams" %>
+
+<table>
+  <tr>
+  </tr>
+  <% for team in @teams %>
+    <tr>
+      <td><%= link_to "Edit", edit_team_path(team) %></td>
+      <td><%= link_to "Destroy", team, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Team", new_team_path %></p>

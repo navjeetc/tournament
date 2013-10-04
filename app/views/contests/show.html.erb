@@ -1,11 +1,17 @@
 <%= render :partial => "main/header", locals: {page_title: "Details"} %>
 
-<div>
-	<h2>Tournament: <%= @contest.name %></h2>
-	<div>
-		Players
-		<ul>
-			<li>player 1</li>
-		</ul>
+<div data-role="content">
+  <div id="container">
+		<div>
+			<h2>Tournament: <%= @contest.name %></h2>
+			<div>
+				Players
+				<ul>
+					<% @players.each do |player| %>
+						<li><%= player.name %></li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>

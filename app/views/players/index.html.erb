@@ -1,0 +1,23 @@
+<%= render :partial => "main/header", locals: {page_title: "Players"} %>
+<div data-role="content">
+
+  <table>
+    <% unless @players.blank? %>
+      <tr>
+        <th>Name</th>
+      </tr>
+    <% end %>
+    <% for player in @players %>
+      <tr>
+        <%= form_for @team do |f| %>  
+        <td><%= player.name %></td>
+        <td><%= link_to "Show", player %></td>
+        <td><%= link_to "Edit", edit_player_path(player) %></td>
+        <td>
+        <% end %>  
+      </tr>
+    <% end %>
+  </table>
+
+  <p><%= link_to "Add Player", new_player_path %></p>
+</div>
