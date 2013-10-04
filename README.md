@@ -1,4 +1,6 @@
 tournament
 ==========
 
-mobile app to create a tournament (mainly for badminton)
+Mobile web app to create/manage a tournament (mainly for badminton)
+
+Uses JQuery Mobile and Ruby on Rails
